@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mainButton {
+  padding-inline: 100px;
+  padding-block: 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+.mainButton.addButton {
+  background-color: green;
+}
+.mainButton.removeButton {
+  background-color: red;
+}
+.countDisplay {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.popup {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  color: #333333;
+  transition: 0.25s;
+}
+
+.popup.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup span {
+  display: block;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.popup button {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  background: #000;
+  border-radius: 10px;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+}
